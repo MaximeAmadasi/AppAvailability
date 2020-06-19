@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageInfo;
+import android.content.pm.ApplicationInfo;
 
 public class AppAvailability extends CordovaPlugin {
     @Override
@@ -33,14 +34,27 @@ public class AppAvailability extends CordovaPlugin {
             return null;
         }
     }
+
+    public ApplicationInfo getAppInfo(String uri) {
+        Context ctx = this.cordova.getActivity().getApplicationContext();
+        final PackageManager pm = ctx.getPackageManager();
+
+        try {
+            return pm.getApplicationInfo(uri, 0);
+        }
+        catch(PackageManager.NameNotFoundException e) {
+            return null;
+        }
+    }
     
     private void checkAvailability(String uri, CallbackContext callbackContext) {
 
         PackageInfo info = getAppPackageInfo(uri);
+        ApplicationInfo appInfo = getAppInfo(uri);
 
         if(info != null) {
             try {
-                callbackContext.success(this.convertPackageInfoToJson(info));
+                callbackContext.success(this.convertPackageInfoToJson(info, appInfo));
             } 
             catch(JSONException e) {
                 callbackContext.error("");    
@@ -51,10 +65,11 @@ public class AppAvailability extends CordovaPlugin {
         }
     }
 
-    private JSONObject convertPackageInfoToJson(PackageInfo info) throws JSONException {
+    private JSONObject convertPackageInfoToJson(PackageInfo info, ApplicationInfo appInfo) throws JSONException {
         JSONObject json = new JSONObject();
         json.put("version", info.versionName);
         json.put("appId", info.packageName);
+        json.put("enabled", appInfo.enabled);
 
         return json;
     }
