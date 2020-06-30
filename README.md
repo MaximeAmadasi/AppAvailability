@@ -1,3 +1,5 @@
+# Note: This plugin is used by the [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator) and may not be suitable for other uses
+
 # AppAvailability for iOS and Android
 
 [![GitHub version](https://badge.fury.io/gh/ohh2ahh%2FAppAvailability.svg)](https://badge.fury.io/gh/ohh2ahh%2FAppAvailability) [![npm version](https://badge.fury.io/js/cordova-plugin-appavailability.svg)](https://badge.fury.io/js/cordova-plugin-appavailability)
