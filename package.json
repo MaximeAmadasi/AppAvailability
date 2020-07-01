@@ -1,6 +1,6 @@
 {
   "name": "bf-cordova-plugin-appavailability",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin for Cordova and PhoneGap allows you to check if an app is installed. It requires an URI Scheme (iOS) or a Package Name (Android).",
   "cordova": {
     "id": "bf-cordova-plugin-appavailability",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WalcoFPV/AppAvailability/AppAvailability.git"
+    "url": "git+https://github.com/WalcoFPV/bf-cordova-plugin-appavailability/bf-cordova-plugin-appavailability.git"
   },
   "keywords": [
     "Cordova",
@@ -41,7 +41,7 @@
   "author": "ohh2ahh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WalcoFPV/AppAvailability/issues"
+    "url": "https://github.com/WalcoFPV/bf-cordova-plugin-appavailability/issues"
   },
-  "homepage": "https://github.com/WalcoFPV/AppAvailability#readme"
+  "homepage": "https://github.com/WalcoFPV/bf-cordova-plugin-appavailability#readme"
 }
