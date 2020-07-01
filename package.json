@@ -1,6 +1,6 @@
 {
   "name": "bf-cordova-plugin-appavailability",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This plugin for Cordova and PhoneGap allows you to check if an app is installed. It requires an URI Scheme (iOS) or a Package Name (Android).",
   "cordova": {
     "id": "bf-cordova-plugin-appavailability",
